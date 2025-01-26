@@ -341,3 +341,18 @@ void exportToCSV() {
     cout <<"\t\t\t\tData exported to CSV successfully!\n";
 }
 //Export CSV
+
+//Import CSV
+void importFromCSV() {
+    ifstream infile("Database.csv");
+    if (!infile) {
+        cerr << "Error: Could not open file for reading.\n";
+        return;
+    }
+
+    student s;
+    while (infile.good()) {
+        string line;
+        getline(infile, line);
+        if (line.empty()) continue;
+
