@@ -98,6 +98,12 @@ void create_a_record() {
     cout <<"\t\t\t\tEnter Second Name: ";
     cin >> s.secondname;
 
+    // Input and validate unique ID
+    string tempId;
+    cout <<"\t\t\t\tEnter ID: ";
+    cin >> tempId;
+    s.id = tempId;
+
 
 // View a specific student record
 void view_Specific(string id) {
