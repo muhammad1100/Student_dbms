@@ -335,4 +335,9 @@ void exportToCSV() {
                 << s.phy << "," << s.gradephy << ","
                 << s.cal << "," << s.gradecal << "\n";
     }
-
+    
+    infile.close();
+    outfile.close();
+    cout <<"\t\t\t\tData exported to CSV successfully!\n";
+}
+//Export CSV
