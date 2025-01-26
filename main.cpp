@@ -355,4 +355,27 @@ void importFromCSV() {
         string line;
         getline(infile, line);
         if (line.empty()) continue;
+        
+        stringstream ss(line);
+        getline(ss, s.firstname, ',');
+        getline(ss, s.secondname, ',');
+        getline(ss, s.id, ',');
+        ss >> s.pf; ss.ignore();
+        getline(ss, s.gradepf, ',');
+        ss >> s.ict; ss.ignore();
+        getline(ss, s.gradeict, ',');
+        ss >> s.eng; ss.ignore();
+        getline(ss, s.gradeEng, ',');
+        ss >> s.phy; ss.ignore();
+        getline(ss, s.gradephy, ',');
+        ss >> s.cal; ss.ignore();
+        getline(ss, s.gradecal);
+
+        // Write to the database file
+        ofstream outfile("Database.txt", ios::app);
+        if (!outfile) {
+            cerr << "Error: Could not open file for writing.\n";
+            return;
+        }
+
 
