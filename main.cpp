@@ -20,3 +20,10 @@ string calculateGrade(float marks);
 void exportToCSV();
 void importFromCSV();
 
+struct student {
+    string firstname;
+    string secondname;
+    string id;
+    float pf, ict, eng, phy, cal;
+    string gradepf, gradeict, gradeEng, gradephy, gradecal;
+};
