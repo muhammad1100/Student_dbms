@@ -103,7 +103,26 @@ void create_a_record() {
     cout <<"\t\t\t\tEnter ID: ";
     cin >> tempId;
     s.id = tempId;
+    
+    cout <<"\t\t\tEnter Programming Fundamentals Marks: ";
+    cin >> s.pf;
+    s.gradepf = calculateGrade(s.pf);
 
+    cout <<"\t\t\tEnter ICT Marks: ";
+    cin >> s.ict;
+    s.gradeict = calculateGrade(s.ict);
+
+    cout <<"\t\t\tEnter English Marks: ";
+    cin >> s.eng;
+    s.gradeEng = calculateGrade(s.eng);
+
+    cout <<"\t\t\tEnter Physics Marks: ";
+    cin >> s.phy;
+    s.gradephy = calculateGrade(s.phy);
+
+    cout <<"\t\t\tEnter Calculus Marks: ";
+    cin >> s.cal;
+    s.gradecal = calculateGrade(s.cal);
 
 // View a specific student record
 void view_Specific(string id) {
