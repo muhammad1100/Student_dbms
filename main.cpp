@@ -87,3 +87,30 @@ string calculateGrade(float marks) {
     else return "F";
 }
 //Calculated grades
+
+
+// View a specific student record
+void view_Specific(string id) {
+    ifstream infile("Database.txt");
+    if (!infile) {
+        cerr << "Error: Could not open file for reading.\n";
+        return;
+    }
+
+    student s;
+    bool found = false;
+    cout<<"\t\t\t\t==========VIEW A PARTICULAR STUDENT DATA===========\n\n"<<endl;
+    while (infile >> s.firstname >> s.secondname >> s.id >> s.pf >> s.gradepf >> s.ict >> s.gradeict >> s.eng >> s.gradeEng >> s.phy >> s.gradephy >> s.cal >> s.gradecal) {
+        if (s.id == id) {
+            cout << left << setw(15) << "First Name" << setw(15) << "Second Name" << setw(10) << "ID"
+                 << setw(10) << "PF" << setw(8) << "Grade" << setw(10) << "ICT" << setw(8) << "Grade"
+                 << setw(10) << "English" << setw(8) << "Grade" << setw(10) << "Physics" << setw(8) << "Grade"
+                 << setw(10) << "Calculus" << setw(8) << "Grade" << endl;
+            cout << string(120, '-') << endl<<endl;
+
+            cout << left << setw(15) << s.firstname << setw(15) << s.secondname << setw(10) << s.id
+                 << setw(10) << s.pf << setw(8) << s.gradepf << setw(10) << s.ict << setw(8) << s.gradeict
+                 << setw(10) << s.eng << setw(8) << s.gradeEng << 
+                 setw(10) << s.phy << setw(8) << s.gradephy
+                 << setw(10) << s.cal << setw(8) << s.gradecal << endl<<endl;
+                 
