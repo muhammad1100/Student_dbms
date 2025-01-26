@@ -325,4 +325,14 @@ void exportToCSV() {
         cerr << "Error: Could not open file.\n";
         return;
     }
+    
+    student s;
+    while (infile >> s.firstname >> s.secondname >> s.id >> s.pf >> s.gradepf >> s.ict >> s.gradeict >> s.eng >> s.gradeEng >> s.phy >> s.gradephy >> s.cal >> s.gradecal) {
+        outfile << s.firstname << "," << s.secondname << "," << s.id << ","
+                << s.pf << "," << s.gradepf << ","
+                << s.ict << "," << s.gradeict << ","
+                << s.eng << "," << s.gradeEng << ","
+                << s.phy << "," << s.gradephy << ","
+                << s.cal << "," << s.gradecal << "\n";
+    }
 
