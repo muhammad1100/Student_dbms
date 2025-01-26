@@ -377,5 +377,19 @@ void importFromCSV() {
             cerr << "Error: Could not open file for writing.\n";
             return;
         }
+        
+        outfile << s.firstname << "\t" << s.secondname << "\t" << s.id << "\t"
+                << s.pf << "\t" << s.gradepf << "\t"
+                << s.ict << "\t" << s.gradeict << "\t"
+                << s.eng << "\t" << s.gradeEng << "\t"
+                << s.phy << "\t" << s.gradephy << "\t"
+                << s.cal << "\t" << s.gradecal << "\n";
 
+        outfile.close();
+    }
+
+    infile.close();
+    cout <<"\t\t\t\tData imported from CSV successfully!\n";
+}
+//Import CSV
 
