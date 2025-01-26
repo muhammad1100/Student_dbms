@@ -140,6 +140,24 @@ void create_a_record() {
 
     outfile.close();
     cout << "Student Data Added Successfully!\n";
+}
+    
+// View all student records
+void viewAll() {
+    ifstream infile("Database.txt");
+    if (!infile) {
+        cerr << "Error: Could not open file for reading.\n";
+        return;
+    }
+
+    student s;
+    cout<<"\t\t\t\t==========VIEW DATA OF ALL STUDENT===========\n\n"<<endl;
+    cout << left << setw(15) << "First Name" << setw(15) << "Second Name" << setw(10) << "ID"
+         << setw(10) << "PF" << setw(8) << "Grade" << setw(10) << "ICT" << setw(8) << "Grade"
+         <<  setw(10) << "English" << setw(8) << "Grade" << setw(10) << "Physics" << setw(8) << "Grade"
+         << setw(10) << "Calculus" << setw(8) << "Grade" << endl;
+    cout << string(120, '-') << endl<<endl;
+
 
 // View a specific student record
 void view_Specific(string id) {
