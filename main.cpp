@@ -8,6 +8,7 @@
 #include<sstream>
 using namespace std;
 
+//functions
 void intro();
 void mainmenu();
 void create_a_record();
@@ -19,7 +20,9 @@ void deleted();
 string calculateGrade(float marks);
 void exportToCSV();
 void importFromCSV();
+//functions
 
+//structure
 struct student {
     string firstname;
     string secondname;
@@ -27,3 +30,11 @@ struct student {
     float pf, ict, eng, phy, cal;
     string gradepf, gradeict, gradeEng, gradephy, gradecal;
 };
+//structure
+
+//main
+int main() {
+    system("cls");
+    system("color F1");
+    int choice;
+
