@@ -123,6 +123,23 @@ void create_a_record() {
     cout <<"\t\t\tEnter Calculus Marks: ";
     cin >> s.cal;
     s.gradecal = calculateGrade(s.cal);
+    
+    // Write to file
+    ofstream outfile("Database.txt", ios::app);
+    if (!outfile) {
+        cerr << "Error: Could not open file for writing.\n";
+        return;
+    }
+
+    outfile << s.firstname << "\t" << s.secondname << "\t" << s.id << "\t"
+            << s.pf << "\t" << s.gradepf << "\t"
+            << s.ict << "\t" << s.gradeict << "\t"
+            << s.eng << "\t" << s.gradeEng << "\t"
+            << s.phy << "\t" << s.gradephy << "\t"
+            << s.cal << "\t" << s.gradecal << "\n";
+
+    outfile.close();
+    cout << "Student Data Added Successfully!\n";
 
 // View a specific student record
 void view_Specific(string id) {
