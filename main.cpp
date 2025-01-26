@@ -158,6 +158,16 @@ void viewAll() {
          << setw(10) << "Calculus" << setw(8) << "Grade" << endl;
     cout << string(120, '-') << endl<<endl;
 
+    while (infile >> s.firstname >> s.secondname >> s.id >> s.pf >> s.gradepf >> s.ict >> s.gradeict >> s.eng >> s.gradeEng >> s.phy >> s.gradephy >> s.cal >> s.gradecal) {
+        cout << left << setw(15) << s.firstname << setw(15) << s.secondname << setw(10) << s.id
+             << setw(10) << s.pf << setw(8) << s.gradepf << setw(10) << s.ict << setw(8) << s.gradeict
+             << setw(10) << s.eng << setw(8) << s.gradeEng << setw(10) << s.phy << setw(8) << s.gradephy
+             << setw(10) << s.cal << setw(8) << s.gradecal << endl<<endl;
+    }
+     cout<<"\t\t\t\t============================================="<<endl;
+
+    infile.close();
+}
 
 // View a specific student record
 void view_Specific(string id) {
