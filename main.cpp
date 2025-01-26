@@ -187,4 +187,21 @@ void modify(string id) {
     remove("Database.txt");
     rename("TempDatabase.txt", "Database.txt");
 }
+// Delete a student record
+void delete_record(string id) {
+    ifstream infile("Database.txt");
+    ofstream tempFile("TempDatabase.txt");
+    if (!infile || !tempFile) {
+        cerr << "Error: Could not open file.\n";
+        return;
+    }
 
+    student s;
+    bool found = false;
+
+    while (infile >> s.firstname >> s.secondname >> s.id >> s.pf >> s.gradepf >> s.ict >> s.gradeict >> s.eng >> s.gradeEng >> s.phy >> s.gradephy >> s.cal >> s.gradecal) {
+        if (s.id == id) {
+            found = true;
+            cout <<"\t\t\t\tDeleting data for ID: " << id << endl;
+            continue; // Skip writing this record to the temp file
+        }
