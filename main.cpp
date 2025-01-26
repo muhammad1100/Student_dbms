@@ -224,4 +224,18 @@ void delete_record(string id) {
     remove("Database.txt");
     rename("TempDatabase.txt", "Database.txt");
 }
+// Confirm deletion
+void deleted() {
+    cout <<"\t\t\t\tData has been deleted successfully.\n";
+}
+
+
+
+void exportToCSV() {
+    ifstream infile("Database.txt");
+    ofstream outfile("Database.csv");
+    if (!infile || !outfile) {
+        cerr << "Error: Could not open file.\n";
+        return;
+    }
 
