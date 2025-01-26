@@ -49,4 +49,11 @@ int main() {
     cout << "\t\t\t\t<=============================================================>\n\n";
     cout << "\t\t\t\t                  Enter Your Choice ==> ";
     cin >> choice;
+    if (choice == 1) {
+        mainmenu();
+    } else {
+        exit(0);
+        return 0;
+    }
+}
 
