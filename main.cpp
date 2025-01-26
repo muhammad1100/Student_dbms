@@ -141,6 +141,7 @@ void create_a_record() {
     outfile.close();
     cout << "Student Data Added Successfully!\n";
 }
+//Add s student record
     
 // View all student records
 void viewAll() {
@@ -168,6 +169,7 @@ void viewAll() {
 
     infile.close();
 }
+//View all student record
 
 // View a specific student record
 void view_Specific(string id) {
@@ -205,6 +207,7 @@ void view_Specific(string id) {
 
     infile.close();
 }
+//View a specific student record
 
 // Modify a student record
 void modify(string id) {
@@ -267,6 +270,8 @@ void modify(string id) {
     remove("Database.txt");
     rename("TempDatabase.txt", "Database.txt");
 }
+//Modify a student record
+
 // Delete a student record
 void delete_record(string id) {
     ifstream infile("Database.txt");
@@ -304,13 +309,15 @@ void delete_record(string id) {
     remove("Database.txt");
     rename("TempDatabase.txt", "Database.txt");
 }
+//Delete a student record
+
 // Confirm deletion
 void deleted() {
     cout <<"\t\t\t\tData has been deleted successfully.\n";
 }
+//confirm deletion
 
-
-
+//Export CSV
 void exportToCSV() {
     ifstream infile("Database.txt");
     ofstream outfile("Database.csv");
