@@ -56,4 +56,23 @@ int main() {
         return 0;
     }
 }
+//main
 
+//introduction
+void intro() {
+    system("cls");
+    cout << "\n\n\n";
+    Sleep(300);
+    cout << "\t\t\t\t\t * * *  ****  *     ****  ***  ***  ****\n";
+    Sleep(300);
+    cout << "\t\t\t\t\t * * *  *     *     *     *  * * * *  *\n";
+    Sleep(300);
+    cout << "\t\t\t\t\t * * *  ****  *     *     *  * * * *  ****\n";
+    Sleep(300);
+    cout << "\t\t\t\t\t * * *  *     *     *     *  * * * *  *\n";
+    Sleep(300);
+    cout << "\t\t\t\t\t  ***  ****  ****  ****  *** * * *   ****\n";
+    Sleep(300);
+    cout << endl;
+}
+//introduction
