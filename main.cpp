@@ -393,3 +393,37 @@ void importFromCSV() {
 }
 //Import CSV
 
+// Main menu
+void mainmenu() {
+    int choice;
+    do {
+        system("cls");
+        cout<<"\n\n\n";
+		Sleep(100);
+		cout<<"\t\t\t\t\t   <=============================>"<<endl<<endl;
+		Sleep(100);
+		cout<<"\t\t\t\t\t              Main Menu           "<<endl;
+		Sleep(100);
+		cout<<"\t\t\t\t\t   <=============================>"<<endl<<endl;
+		Sleep(100);
+        cout<<"\t\t\t\t\t 1. Add Student                             "<<endl<<endl;
+        Sleep(100);
+        cout <<"\t\t\t\t\t 2. View All Data                          "<<endl<<endl;
+        Sleep(100);
+        cout <<"\t\t\t\t\t 3. View Specific Data                     "<<endl<<endl;
+        Sleep(100);
+        cout <<"\t\t\t\t\t 4. Modify Data                            "<<endl<<endl;
+        Sleep(100);
+        cout <<"\t\t\t\t\t 5. Delete Data                            "<<endl<<endl;
+        Sleep(100);
+        cout <<"\t\t\t\t\t 6. Export to CSV                          "<<endl<<endl;
+        Sleep(100);
+        cout <<"\t\t\t\t\t 7. Import from CSV                        "<<endl<<endl;
+        Sleep(100);
+        cout <<"\t\t\t\t\t 8. Exit                                   "<<endl<<endl;
+        Sleep(100);
+        cout<<"\t\t\t\t\t  <=============================>"<<endl<<endl;
+        
+        cout <<"\t\t\t\t\t Enter your choice: ==> ";
+        cin >> choice;
+
