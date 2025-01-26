@@ -168,3 +168,23 @@ void modify(string id) {
             cin >> s.cal;
             s.gradecal = calculateGrade(s.cal);
         }
+        tempFile << s.firstname << "\t" << s.secondname << "\t" << s.id << "\t"
+                 << s.pf << "\t" << s.gradepf << "\t"
+                 << s.ict << "\t" << s.gradeict << "\t"
+                 << s.eng << "\t" << s.gradeEng << "\t"
+                 << s.phy << "\t" << s.gradephy << "\t"
+                 << s.cal << "\t" << s.gradecal << "\n";
+    }
+
+    if (!found) {
+        cout << "Record not found for ID: " << id << endl;
+    } else {
+        cout << "Record modified successfully!\n";
+    }
+
+    infile.close();
+    tempFile.close();
+    remove("Database.txt");
+    rename("TempDatabase.txt", "Database.txt");
+}
+
