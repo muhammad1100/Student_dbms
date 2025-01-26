@@ -426,4 +426,43 @@ void mainmenu() {
         
         cout <<"\t\t\t\t\t Enter your choice: ==> ";
         cin >> choice;
+        
+        string id;
+        switch (choice) {
+        case 1:
+            create_a_record();
+            break;
+        case 2:
+            viewAll();
+            break;
+        case 3:
+            cout << "Enter ID to view: ";
+            cin >> id;
+            view_Specific(id);
+            break;
+        case 4:
+            cout << "Enter ID to modify: ";
+            cin >> id;
+            modify(id);
+            break;
+        case 5:
+            cout << "Enter ID to delete: ";
+            cin >> id;
+            delete_record(id);
+            deleted();
+        case 6:
+            exportToCSV();
+            break;
+        case 7:
+            importFromCSV();
+            break;
+        case 8:
+            return;
+        default:
+            cout << "Invalid choice, please try again.\n";
+        }
 
+        system("pause");
+    } while (choice != 8);
+}
+//Main Menu
