@@ -37,4 +37,16 @@ int main() {
     system("cls");
     system("color F1");
     int choice;
+    
+    intro();
+    Sleep(300);
+    cout << "\t\t\t\t<============ Student Database Management System ============>\n\n";
+    Sleep(300);
+    cout << "\t\t\t\t                      1. Main Menu\n\n";
+    Sleep(300);
+    cout << "\t\t\t\t                      2. Exit\n\n";
+    Sleep(300);
+    cout << "\t\t\t\t<=============================================================>\n\n";
+    cout << "\t\t\t\t                  Enter Your Choice ==> ";
+    cin >> choice;
 
