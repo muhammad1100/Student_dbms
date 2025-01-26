@@ -88,6 +88,16 @@ string calculateGrade(float marks) {
 }
 //Calculated grades
 
+// Add student record
+void create_a_record() {
+    system("cls");
+    student s;
+    cout<<"\t\t\t\t=======CREATE A DATA======\n\n";
+    cout <<"\t\t\t\tEnter First Name: ";
+    cin >> s.firstname;
+    cout <<"\t\t\t\tEnter Second Name: ";
+    cin >> s.secondname;
+
 
 // View a specific student record
 void view_Specific(string id) {
