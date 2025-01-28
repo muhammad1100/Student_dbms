@@ -4,8 +4,9 @@
 #include <string>
 #include <iomanip>
 #include <windows.h>
-#include<vector>
-#include<sstream>
+#include <vector>
+#include <sstream>
+#include <limits>
 using namespace std;
 
 //functions
@@ -37,7 +38,7 @@ int main() {
     system("cls");
     system("color F1");
     int choice;
-    
+    do{
     intro();
     Sleep(300);
     cout << "\t\t\t\t<============ Student Database Management System ============>\n\n";
@@ -49,12 +50,21 @@ int main() {
     cout << "\t\t\t\t<=============================================================>\n\n";
     cout << "\t\t\t\t                  Enter Your Choice ==> ";
     cin >> choice;
-    if (choice == 1) {
-        mainmenu();
-    } else {
-        exit(0);
-        return 0;
+
+    switch (choice) {
+        case 1:
+            mainmenu();
+            break;
+        case 2:
+            cout << "\n\t\t\t\tExiting the program. Goodbye!\n";
+            break;
+        default:
+            cout << "\n\t\t\t\tInvalid choice! Please enter a valid option (1 or 2).\n";
+            system("pause");
+            
     }
+}while(choice != 2);
+    
 }
 //main
 
@@ -65,13 +75,13 @@ void intro() {
     Sleep(300);
     cout << "\t\t\t\t\t * * *  ****  *     ****  ***  ***  ****\n";
     Sleep(300);
-    cout << "\t\t\t\t\t * * *  *     *     *     *  * * * *  *\n";
+    cout << "\t\t\t\t\t * * *  *     *     *     *  * * * * *\n";
     Sleep(300);
-    cout << "\t\t\t\t\t * * *  ****  *     *     *  * * * *  ****\n";
+    cout << "\t\t\t\t\t * * *  ****  *     *     *  * * * * ****\n";
     Sleep(300);
-    cout << "\t\t\t\t\t * * *  *     *     *     *  * * * *  *\n";
+    cout << "\t\t\t\t\t * * *  *     *     *     *  * * * * *\n";
     Sleep(300);
-    cout << "\t\t\t\t\t  ***  ****  ****  ****  *** * * *   ****\n";
+    cout << "\t\t\t\t\t  ***   ****  ****  ****  *** * * *  ****\n";
     Sleep(300);
     cout << endl;
 }
